@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PomodoApp</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+      body {
+        width: 500px;
+        height: 350px;
+        font-family: "Montserrat", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex flex-col justify-center items-center">
+      <div id="title">
+        <h1 class="mt-4 text-4xl font-bold">Pomodoro App</h1>
+      </div>
+
+      <div class="mt-10 mb-6">
+        <p id="timer" class="text-8xl">
+          <span id="minutes" class="text-8xl">00</span>
+          :
+          <span id="seconds" class="text-8xl">00</span>
+        </p>
+      </div>
+
+      <div id="controllers" class="flex gap-5">
+        <button
+          id="start"
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        >
+          Iniciar
+        </button>
+        <button
+          id="pause"
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        >
+          Pausar
+        </button>
+        <button
+          id="restart"
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        >
+          Reiniciar
+        </button>
+      </div>
+
+      <div id="config" class="flex justify-center mt-6 gap-3 w-96">
+        <label for="focusMinutes">
+          Minutos de foco
+          <input
+            id="focusMinutes"
+            name="focusMinutes"
+            type="number"
+            placeholder="Minutos de foco"
+            class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            min="0"
+            max="59"
+            value="20"
+          />
+        </label>
+        <label for="pauseMinutes">
+          Minutos de pausa
+          <input
+            id="pauseMinutes"
+            name="pauseMinutes"
+            type="number"
+            placeholder="Minutos de pausa"
+            class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            min="0"
+            max="59"
+            value="5"
+          />
+        </label>
+      </div>
+    </div>
+    <script type="module" src="background.js"></script>
+  </body>
+</html>

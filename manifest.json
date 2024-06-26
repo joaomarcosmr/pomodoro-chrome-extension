@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Pomodoro App",
+  "version": "1.0",
+  "description": "Sua extensão de produtividade preferida.",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": ["activeTab"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  }
+}
